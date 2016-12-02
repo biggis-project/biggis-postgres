@@ -1,0 +1,16 @@
+version: '2.1'
+services:
+
+  postgres:
+    image: biggis/postgres:9.6
+    hostname: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      USER_NAME: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    # volumes:
+    #   - pg-data:/var/lib/postgresql/data/pgdata
+
+# volumes:
+  # pg-data:
