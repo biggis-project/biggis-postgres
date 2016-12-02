@@ -14,9 +14,9 @@ LABEL eu.biggis-project.build-date=$BUILD_DATE \
       eu.biggis-project.url="http://biggis-project.eu/" \
       eu.biggis-project.vcs-ref=$VCS_REF \
       eu.biggis-project.vcs-type="Git" \
-      eu.biggis-project.vcs-url="https://github.com/biggis-project/biggis-infrastructure" \
+      eu.biggis-project.vcs-url="https://github.com/biggis-project/biggis-postgres" \
       eu.biggis-project.environment="dev" \
-      eu.biggis-project.version=$FLINK_VERSION
+      eu.biggis-project.version=$PG_MAJOR
 
 ENV LANG en_US.utf8
 ENV PGDATA /opt/postgresql/data
