@@ -2,8 +2,21 @@ FROM biggis/base:java8-jre-alpine
 
 MAINTAINER wipatrick
 
-ENV PG_MAJOR=9.6.0
-ENV PG_VERSION=9.6.0-r1
+ARG PG_MAJOR=9.6.0
+ARG PG_VERSION=9.6.0-r1
+
+ARG BUILD_DATE
+ARG VCS_REF
+
+LABEL eu.biggis-project.build-date=$BUILD_DATE \
+      eu.biggis-project.license="MIT" \
+      eu.biggis-project.name="BigGIS" \
+      eu.biggis-project.url="http://biggis-project.eu/" \
+      eu.biggis-project.vcs-ref=$VCS_REF \
+      eu.biggis-project.vcs-type="Git" \
+      eu.biggis-project.vcs-url="https://github.com/biggis-project/biggis-infrastructure" \
+      eu.biggis-project.environment="dev" \
+      eu.biggis-project.version=$FLINK_VERSION
 
 ENV LANG en_US.utf8
 ENV PGDATA /opt/postgresql/data
