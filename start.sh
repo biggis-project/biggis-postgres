@@ -1,6 +1,6 @@
 #!/bin/sh
 chown -R postgres "$PGDATA"
-chmod -R 700 "$PGDATA"
+chmod 700 "$PGDATA"
 
 if [ -z "$(ls -A "$PGDATA")" ]; then
     gosu postgres initdb --locale='de_DE.UTF-8'
