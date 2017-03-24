@@ -2,8 +2,8 @@ FROM biggis/base:java8-jre-alpine
 
 MAINTAINER wipatrick
 
-ARG PG_MAJOR=9.6.0
-ARG PG_VERSION=9.6.0-r1
+ARG PG_MAJOR=9.6.2
+ARG PG_VERSION=9.6.2-r1
 
 ARG BUILD_DATE
 ARG VCS_REF
