@@ -37,6 +37,7 @@ VOLUME ["/var/lib/postgresql/data/pgdata"]
 EXPOSE 5432
 
 ADD healthcheck.sh /opt/postgresql/
+RUN chmod +x /opt/postgresql/healthcheck.sh
 
 HEALTHCHECK --interval=5s --timeout=3s --retries=20 \
   CMD /opt/postgresql/healthcheck.sh
